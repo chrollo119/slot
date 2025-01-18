@@ -39,3 +39,29 @@ body {
 #button:hover {
   background-color: #2563eb;
 }
+
+
+
+.animate {
+  animation: bounce 1s ease-in-out infinite;  
+}
+
+
+/* Keyframes for the bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

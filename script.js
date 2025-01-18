@@ -16,8 +16,6 @@ let B3 = [
   '/public/melon.png'
 ];
 
-
-
 // Function to randomize images
 function randomImages() {
   const index1 = Math.floor(Math.random() * B1.length);
@@ -40,8 +38,17 @@ document.getElementById('button').addEventListener('click', () => {
   document.getElementById('image2').src = randomizedImages.cherry;
   document.getElementById('image3').src = randomizedImages.melon;
 
+  // Delay the check for a moment to ensure images have been updated
+  setTimeout(() => {
+    // Check if all images are the same
+    if (randomizedImages.berry === randomizedImages.cherry && randomizedImages.cherry === randomizedImages.melon) {
+      // Trigger pop-up or animation
+      alert("All images are the same!");
 
-
-
-
+      // For an animation (example: adding a class for animation)
+      document.getElementById('image1').classList.add('animate');
+      document.getElementById('image2').classList.add('animate');
+      document.getElementById('image3').classList.add('animate');
+    }
+  }, 50);  // 50ms delay to allow for image updates
 });
